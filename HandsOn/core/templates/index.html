@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>Hands ON Django</title>
+
+    <link rel="stylesheet" href="{% static 'css/normalize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+</head>
+
+<body>
+
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">Hands On</h1>
+            {% block header %} {% endblock %}
+        </header>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix">
+            {% block main %} {% endblock %} {% block aside %}{% endblock %}
+        </div>
+        <!-- #main -->
+    </div>
+    <!-- #main-container -->
+    {%block footer %}{% endblock %}
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
